@@ -1,0 +1,4 @@
+{
+  "extends": "@naverpay/markdown-lint",
+  "MD053": false
+}

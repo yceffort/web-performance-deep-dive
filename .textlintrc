@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "prh": {
+      "rulePaths": [
+        "./typos.yml"
+      ]
+    }
+  },
+  "filters": {
+    "comments": true
+  }
+}

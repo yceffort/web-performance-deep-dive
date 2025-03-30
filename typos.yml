@@ -1,0 +1,98 @@
+version: 1
+rules:
+  - expected: 반환
+    pattern: 리턴
+  - expected: 메서드
+    pattern: 메소드
+  - expected: 생명주기
+    pattern: 라이프사이클
+  - expected: 클래스 컴포넌트
+    pattern: 클래스형 컴포넌트
+  - expected: 함수 컴포넌트
+    pattern: 함수형 컴포넌트
+  - expected: 리렌더링
+    pattern: 재렌더링
+  - expected: 바이너리
+    pattern: 이진
+  - expected: 리팩터링
+    pattern: 리팩토링
+  - expected: 프런트엔드
+    pattern: 프론트엔드
+  - expected: 패키지 관리자
+    pattern: 패키지 매니저
+  - expected: 께
+    pattern: 꼐
+  - expected: 트리 쉐이킹
+    pattern: 트리쉐이킹
+  - expected: 시스템이
+    pattern: 체계가
+  - expected: 시스템을
+    pattern: 체계를
+  - expected: 시스템이나
+    pattern: 체계나
+  - expected: 때
+    pattern: 떄 # 자주 하는 오타
+  - expected: 구성 파일
+    patterns:
+      - 설정파일
+      - 설정 파일
+      - 구성파일
+  - expected: '`require()` 함수'
+    patterns:
+      - require 함수
+      - require함수
+      - '`require`'
+  - expected: 자바스크립트
+    patterns:
+      - JavaScript
+      - javascript
+      - Javascript
+  - expected: 타입스크립트
+    patterns:
+      - TypeScript
+      - Typescript
+      - typeScript
+  - expected: browserslist
+    pattern:
+      - browserlist
+  - expected: package.json
+    pattern:
+      - pakcage.json
+  - expected: 저장소
+    patterns:
+      - 레파지토리
+      - 레포지토리
+  - expected: 최상위
+    pattern: 루트
+  - expected: ES5
+    pattern: /ECMAScript ?2009/
+  - expected: ES6
+    pattern: /ECMAScript ?2015/
+  - expected: '`Node.js`'
+    pattern: /\b(?:nodejs|Nodejs|node.js|Node.js)(?!@|`|\d)/
+    options:
+      wordBoundary: true
+  - expected: '`CommonJS`'
+    pattern: /\b(?:commonjs|CommonJS)\b(?!`)/
+    options:
+      wordBoundary: true
+  - expected: '`ESModule`'
+    pattern: /\b(?:esmodule|ESModule)\b(?!`)/
+    options:
+      wordBoundary: true
+  - expected: '`AMD`'
+    pattern: /\b(?:amd|AMD)\b(?!`)/
+    options:
+      wordBoundary: true
+  - expected: '`SystemJS`'
+    pattern: /\b(?:systemjs|SystemJS)\b(?!`)/
+    options:
+      wordBoundary: true
+  - expected: '`UMD`'
+    pattern: /\b(?:umd|UMD)\b(?!`)/
+    options:
+      wordBoundary: true
+  - expected: ''
+    pattern: �
+  - expected: 의존성
+    pattern: 종속성

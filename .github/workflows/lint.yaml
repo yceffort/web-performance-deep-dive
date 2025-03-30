@@ -1,0 +1,25 @@
+name: lint
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          npm install -g corepack@latest
+          corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run md
+      - run: pnpm run prettier
+      - run: pnpm run textlint

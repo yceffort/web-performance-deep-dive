@@ -1,0 +1,13 @@
+diff --git a/index.mjs b/index.mjs
+index 0c0304542606aed37e4a0258cb421f76d92890f4..bb88da7ebf0f72bd517adf09707957204d41f9da 100644
+--- a/index.mjs
++++ b/index.mjs
+@@ -19962,7 +19962,7 @@ async function normalizeFormatOptions(options8, opts = {}) {
+       rawOptions[k] = value;
+     }
+   }
+-  if (rawOptions.parser === "json") {
++  if (rawOptions.parser === "json" || rawOptions.parser === "jsonc") {
+     rawOptions.trailingComma = "none";
+   }
+   return normalize_options_default(rawOptions, supportOptions, {

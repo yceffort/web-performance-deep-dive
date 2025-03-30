@@ -1,0 +1,12 @@
+pre-commit:
+  commands:
+    prettier:
+      skip:
+        - ref: main
+      glob: '**/*.{ts,tsx,js,jsx,json}'
+      run: pnpm exec prettier --check {staged_files}
+    markdownlint:
+      skip:
+        - ref: main
+      glob: 'posts/**/*.md'
+      run: pnpm exec markdownlint {staged_files}

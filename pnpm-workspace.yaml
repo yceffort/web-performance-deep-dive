@@ -1,0 +1,2 @@
+patchedDependencies:
+  prettier: patches/prettier.patch

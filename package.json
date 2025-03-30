@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "web-performance-deep-dive",
+  "version": "0.0.0",
+  "description": "yceffort's 3rd deep dive series.",
+  "author": "yceffort <root@yceffort.kr> (https://yceffort.kr)",
+  "maintainers": [
+    {
+      "name": "yceffort",
+      "email": "root@yceffort.kr",
+      "url": "https://yceffort.kr"
+    }
+  ],
+  "scripts": {
+    "fix": "pnpm run prettier:fix && pnpm run md:fix && pnpm run textlint:fix",
+    "md": "markdownlint --config '.markdownlint.jsonc' '**/*.md' '#node_modules'",
+    "md:fix": "markdownlint --config '.markdownlint.jsonc' --fix '**/*.md' '#node_modules'",
+    "prepare": "lefthook install",
+    "prettier": "prettier '**/*.{json,yaml,yml,md}' --check",
+    "prettier:fix": "prettier '**/*.{json,yaml,yml,md}' --write",
+    "textlint": "textlint .",
+    "textlint:fix": "textlint --fix ."
+  },
+  "devDependencies": {
+    "@naverpay/markdown-lint": "^0.0.3",
+    "lefthook": "^1.7.13",
+    "markdownlint-cli2": "^0.7.1",
+    "prettier": "^3.3.3",
+    "textlint": "^14.0.5",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-prh": "^6.0.0"
+  },
+  "packageManager": "pnpm@10.7.0",
+  "engines": {
+    "node": "^20 || ^22",
+    "pnpm": "^10.7.0"
+  }
+}
