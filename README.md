@@ -46,11 +46,11 @@
    - 압축(Gzip, Brotli), 캐싱 헤더(Cache-Control, ETag)
    - Preload, Prefetch, DNS Prefetch, Preconnect 등 리소스 힌트
 
-## 5장. 프론트엔드 빌드와 번들링 최적화
+## 5장. 프런트엔드 빌드와 번들링 최적화
 
 1. 모듈 번들러 개요
    - Webpack, Rollup, Parcel, esbuild 비교
-   - 모듈 시스템(ES Modules, CommonJS) 이해
+   - 모듈 시스템(ES Modules, `CommonJS`) 이해
 2. 번들 사이즈 관리
    - 코드 스플리팅, 트리 쉐이킹, Lazy Loading
    - 서드파티 라이브러리 분리 및 번들 분석
@@ -94,7 +94,7 @@
    - Adaptive Bitrate, HLS/DASH 개념
    - Lazy Loading, 미디어 CDN 적용
 
-## 9장. 프론트엔드 프레임워크별 성능 팁
+## 9장. 프런트엔드 프레임워크별 성능 팁
 
 1. 리액트
 
@@ -160,7 +160,7 @@
    - 스크립트 기반 성능 지표 수집
 2. 부하 테스트 기초
    - k6, Gatling, JMeter를 통한 API 부하
-   - 프론트엔드 개발자의 관점에서 체크할 항목
+   - 프런트엔드 개발자의 관점에서 체크할 항목
 3. 실시간 모니터링과 알림
    - RUM 도구(Sentry, Datadog) 사용
    - 로그, 에러 리포팅과 퍼포먼스 연계
@@ -208,7 +208,7 @@
    - AI/ML 기반 사용자 분석과 퍼포먼스 자동 최적화
 2. 서버리스와 엣지 컴퓨팅
    - AWS Lambda@Edge, Cloudflare Workers
-   - Edge-first 아키텍처가 프론트엔드 성능에 미치는 영향
+   - Edge-first 아키텍처가 프런트엔드 성능에 미치는 영향
 
 ## 17장. 마치며
 
