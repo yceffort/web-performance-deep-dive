@@ -98,3 +98,11 @@ rules:
     pattern: 종속성
   - expected: 성능
     pattern: 퍼포먼스
+  - expected: '"'
+    pattern: “
+  - expected: '"'
+    pattern: ”
+  - expected: "'"
+    pattern: ‘
+  - expected: "'"
+    pattern: ’
