@@ -96,3 +96,5 @@ rules:
     pattern: �
   - expected: 의존성
     pattern: 종속성
+  - expected: 성능
+    pattern: 퍼포먼스

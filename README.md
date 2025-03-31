@@ -1,10 +1,8 @@
 # web-performance-deep-dive
 
-> yceffort's third deep dive series book
-
 ## 1장. 시작하며
 
-1. 왜 웹 퍼포먼스인가?
+1. 왜 웹 성능이 중요한가?
    - 성능이 사용자 경험 및 비즈니스 가치에 미치는 영향
    - 개인 학습 및 실무 적용의 장점
 2. 책의 구성 및 목표
@@ -13,10 +11,10 @@
 
 ## 2장. 웹 성능 지표와 측정 기초
 
-1. 브라우저 퍼포먼스 지표
+1. 브라우저 성능 지표
    - FCP, LCP, TTI, CLS 등 핵심 웹 지표
    - TTFB, Speed Index 등 핵심 웹 지표는 아니지만 눈여겨 봐야할 추가 지표
-2. 타이밍 API와 퍼포먼스 로깅
+2. 타이밍 API와 성능 로깅
    - Navigation Timing, Resource Timing API
    - 성능 측정 자동화 (예: Lighthouse, WebPageTest)
 3. 실무/개인 프로젝트에서 측정 적용
@@ -49,8 +47,8 @@
 ## 5장. 프런트엔드 빌드와 번들링 최적화
 
 1. 모듈 번들러 개요
-   - Webpack, Rollup, Parcel, esbuild 비교
-   - 모듈 시스템(ES Modules, `CommonJS`) 이해
+   - Webpack, Rollup, esbuild 비교
+   - 모듈 시스템(`ESModule`, `CommonJS`) 이해
 2. 번들 사이즈 관리
    - 코드 스플리팅, 트리 쉐이킹, Lazy Loading
    - 서드파티 라이브러리 분리 및 번들 분석
@@ -58,7 +56,7 @@
    - ESNext 기반의 빌드
    - Polyfill 최소화, 브라우저 타겟 자동 설정(Browserslist)
 
-## 6장. 자바스크립트 퍼포먼스 집중 공략
+## 6장. 자바스크립트 성능 집중 공략
 
 1. 이벤트 루프와 비동기 처리
    - 싱글 스레드 모델, 콜 스택, 메시지 큐
@@ -70,7 +68,7 @@
    - 스코프, 클로저, 가비지 컬렉션 이해
    - Performance API를 통한 메모리 사용량 추적
 
-## 7장. CSS 퍼포먼스 최적화
+## 7장. CSS 성능 최적화
 
 1. CSS 파싱 및 렌더링 특징
    - CSSOM 생성, 블로킹 리소스 처리
@@ -121,7 +119,7 @@
      - 초기 렌더링 속도, SEO와의 관계
      - `getServerSideProps`, `getStaticProps` 개념
    - 성능 측면에서의 이점
-     - TTFB 개선, 퍼포먼스 측정 지표
+     - TTFB 개선, 성능 측정 지표
      - CDN 배포와 SSR 캐싱 전략(간단한 적용 예시)
 
 2. Nuxt.js를 활용한 SSR
@@ -163,9 +161,9 @@
    - 프런트엔드 개발자의 관점에서 체크할 항목
 3. 실시간 모니터링과 알림
    - RUM 도구(Sentry, Datadog) 사용
-   - 로그, 에러 리포팅과 퍼포먼스 연계
+   - 로그, 에러 리포팅과 성능 연계
 
-## 13장. 모바일 환경 퍼포먼스 최적화
+## 13장. 모바일 환경 성능 최적화
 
 1. 모바일 디바이스 특성
    - 네트워크 제약, CPU/GPU 스펙
@@ -205,7 +203,7 @@
 
 1. 차세대 웹 기술
    - WebAssembly, WebGPU, OffscreenCanvas
-   - AI/ML 기반 사용자 분석과 퍼포먼스 자동 최적화
+   - AI/ML 기반 사용자 분석과 성능 자동 최적화
 2. 서버리스와 엣지 컴퓨팅
    - AWS Lambda@Edge, Cloudflare Workers
    - Edge-first 아키텍처가 프런트엔드 성능에 미치는 영향
@@ -224,7 +222,7 @@
 
 ## 부록
 
-1. 퍼포먼스 튜닝 체크리스트
+1. 성능 튜닝 체크리스트
    - 프론트 중심(HTML, CSS, JS, 이미지, 폰트, 네트워크 등)
 2. 용어 정리(Glossary)
    - 주요 성능·네트워크·보안 용어 설명
