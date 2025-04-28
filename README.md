@@ -2,220 +2,252 @@
 
 ## 1장. 시작하며
 
-1. 왜 웹 성능이 중요한가?
-   - 성능이 사용자 경험 및 비즈니스 가치에 미치는 영향
-   - 개인 학습 및 실무 적용의 장점
-2. 책의 구성 및 목표
-   - 각 장에서 다루는 범위와 학습 순서
-   - 예시 코드, 실습 환경, 자료 활용 방법
+### 1-1. 왜 웹 성능이 중요한가?
+
+- 성능이 사용자 경험 및 비즈니스 가치에 미치는 영향
+- 개인 학습 및 실무 적용의 장점
+
+### 1-2. 책의 구성 및 목표
+
+- 각 장에서 다루는 범위와 학습 순서
+- 예시 코드, 실습 환경, 자료 활용 방법
 
 ## 2장. 웹 성능 지표와 측정 기초
 
-1. 브라우저 성능 지표
-   - FCP, LCP, TTI, CLS 등 핵심 웹 지표
-   - TTFB, Speed Index 등 핵심 웹 지표는 아니지만 눈여겨 봐야할 추가 지표
-2. 타이밍 API와 성능 로깅
-   - Navigation Timing, Resource Timing API
-   - 성능 측정 자동화 (예: Lighthouse, WebPageTest)
-3. 실무/개인 프로젝트에서 측정 적용
-   - Chrome DevTools 활용
-   - CI 연동 없이도 가능한 로컬 자동 측정 스크립트 예시
+### 2-1. 브라우저 성능 지표
+
+- FCP, LCP, TTI, CLS 등 핵심 웹 지표
+- TTFB, Speed Index 등 부가적인 참고 지표
+
+### 2-2. 타이밍 API와 성능 로깅
+
+- Navigation Timing, Resource Timing API
+- 성능 측정 자동화 도구 소개 (Lighthouse, WebPageTest)
+
+### 2-3. 실무/개인 프로젝트에서 측정 적용
+
+- Chrome DevTools 실습
+- 로컬 환경에서 성능 측정 스크립트 작성
 
 ## 3장. 브라우저 렌더링 과정 이해
 
-1. DOM, CSSOM, Render Tree
-   - 크리티컬 렌더링 경로(Critical Rendering Path)
-   - 파싱 과정, 블로킹 리소스
-2. Reflow(Recalculate Style)와 Repaint
-   - 렌더 트리 업데이트 메커니즘
-   - 레이아웃 스래싱(Layout Thrashing) 방지 기법
-3. GPU 가속과 브라우저 렌더링 최적화
-   - 브라우저의 자바스크립트 실행/DOM 업데이트 흐름
-   - GPU 합성 계층(Compositing Layer)과 애니메이션에 미치는 영향
+### 3-1. DOM, CSSOM, Render Tree
+
+- 크리티컬 렌더링 경로 이해
+- 파싱 과정과 블로킹 리소스 분석
+
+### 3-2. Reflow와 Repaint
+
+- 렌더 트리 업데이트 메커니즘
+- 레이아웃 스래싱 방지 기법
+
+### 3-3. GPU 가속과 렌더링 최적화
+
+- 자바스크립트 실행 흐름
+- GPU 합성 계층과 애니메이션 최적화
 
 ## 4장. 네트워크 최적화와 HTTP/2, HTTP/3
 
-1. HTTP/1.1 vs HTTP/2 vs HTTP/3(QUIC)
-   - 멀티플렉싱, 헤더 압축, 전송 성능 비교
-2. HTTPS/TLS 성능 고려
-   - 인증서, 핸드셰이크, HSTS 등
-   - 성능 임팩트와 최적화 방안
-3. 리소스 전송 효율화
-   - 압축(Gzip, Brotli), 캐싱 헤더(Cache-Control, ETag)
-   - Preload, Prefetch, DNS Prefetch, Preconnect 등 리소스 힌트
+### 4-1. HTTP/1.1 vs HTTP/2 vs HTTP/3
 
-## 5장. 프런트엔드 빌드와 번들링 최적화
+- 멀티플렉싱, 헤더 압축, 전송 최적화
 
-1. 모듈 번들러 개요
-   - Webpack, Rollup, esbuild 비교
-   - 모듈 시스템(`ESModule`, `CommonJS`) 이해
-2. 번들 사이즈 관리
-   - 코드 스플리팅, 트리 쉐이킹, Lazy Loading
-   - 서드파티 라이브러리 분리 및 번들 분석
-3. Modern Build 전략
-   - ESNext 기반의 빌드
-   - Polyfill 최소화, 브라우저 타겟 자동 설정(Browserslist)
+### 4-2. HTTPS/TLS 성능 최적화
+
+- 인증서 관리, 핸드셰이크 최적화
+
+### 4-3. 리소스 전송 효율화
+
+- 압축, 캐싱, 리소스 프리로딩 전략
+
+## 5장. 빌드와 번들 최적화
+
+### 5-1. 코드 스플리팅과 트리 쉐이킹
+
+- Dynamic Import, 트리 쉐이킹 적용법
+
+### 5-2. Lazy Loading 전략
+
+- 라우트/컴포넌트 기반 Lazy Loading 실습
+
+### 5-3. 서드파티 라이브러리 다이어트
+
+- moment.js 교체, lodash 최적화 전략
+
+### 5-4. ESNext 기반 빌드 전략과 Polyfill 최소화
+
+- ES2020+ 빌드, Browserslist, polyfill 전략
+
+### 5-5. 번들 분석과 병목 제거
+
+- Webpack Bundle Analyzer 실습
+- 무거운 모듈 식별 및 대처
 
 ## 6장. 자바스크립트 성능 집중 공략
 
-1. 이벤트 루프와 비동기 처리
-   - 싱글 스레드 모델, 콜 스택, 메시지 큐
-   - 콜백, 프로미스, `async/await`의 성능 관점
-2. DOM 조작 최소화
-   - 가상 DOM(React), Incremental DOM(Angular), Vue 가상 DOM
-   - Batch updates, re-render 최적화
-3. 메모리 관리와 최적화 기법
-   - 스코프, 클로저, 가비지 컬렉션 이해
-   - Performance API를 통한 메모리 사용량 추적
+### 6-1. 이벤트 루프와 비동기 처리
+
+- 싱글 스레드 모델과 async/await 성능 관점
+
+### 6-2. DOM 조작 최소화
+
+- 가상 DOM 및 Batch 업데이트 전략
+
+### 6-3. 메모리 관리와 최적화
+
+- 클로저, 가비지 컬렉션 이해 및 메모리 추적
 
 ## 7장. CSS 성능 최적화
 
-1. CSS 파싱 및 렌더링 특징
-   - CSSOM 생성, 블로킹 리소스 처리
-   - @import, @font-face 지연 로딩 시 이슈
-2. 레이아웃/페인트 최적화
-   - `will-change`, `transform`, `opacity` 활용
-   - GPU 가속 애니메이션 vs CPU 렌더링
-3. Critical CSS와 분할 로딩
-   - 초기 렌더링 속도 개선
-   - CSS 병합, 중복 제거, 코드 스플리팅
+### 7-1. CSS 파싱 및 렌더링 특징
+
+- CSSOM, 블로킹 리소스 최적화
+
+### 7-2. 레이아웃과 페인트 최적화
+
+- will-change, transform, opacity 활용
+
+### 7-3. Critical CSS와 분할 로딩
+
+- 초기 렌더링 최적화, CSS 코드 스플리팅
 
 ## 8장. 이미지와 폰트, 미디어 리소스 최적화
 
-1. 이미지 최적화 전략
-   - WebP, AVIF, JPEG, PNG, SVG 등 선택 가이드
-   - Responsive Images(`srcset`, `<picture>`) 활용
-2. 웹폰트 로딩 최적화
-   - Preload, Font Display(`swap`, `fallback` 등)
-   - 서브셋(Subsetting)으로 폰트 파일 다이어트
-3. 동영상/오디오 스트리밍
-   - Adaptive Bitrate, HLS/DASH 개념
-   - Lazy Loading, 미디어 CDN 적용
+### 8-1. 이미지 최적화 전략
+
+- 포맷 선택, Responsive Images 실습
+
+### 8-2. 웹폰트 최적화
+
+- Preload, Font Display, 서브셋 전략
+
+### 8-3. 소규모 동영상/오디오 스트리밍 최적화
+
+- 웹 페이지 삽입용 미디어 최적화 전략
+- Lazy Loading 및 미디어 CDN 활용
 
 ## 9장. 프런트엔드 프레임워크별 성능 팁
 
-1. 리액트
+### 9-1. React 성능 최적화
 
-   - Hooks와 리렌더링 최적화
-     - `useMemo`, `useCallback` 등 메모이제이션 기법
-     - 컴포넌트 분리, `memo` 활용
-   - 리액트 Suspense와 Concurrent Mode 개요
-     - Suspense를 통한 비동기 데이터 로딩
-     - Concurrent Rendering이 실제 성능에 미치는 영향 (개념적인 소개)
+- Hooks 리렌더링 최적화
+- Suspense와 Concurrent Mode 소개
 
-2. Vue
-   - 반응성(Reactivity) 시스템 이해
-     - Vue 2 vs Vue 3의 차이 (Proxy 기반 vs `defineProperty` 기반)
-     - 반응성 주기가 DOM 업데이트와 렌더링에 끼치는 영향
-   - Vuex/Pinia에서의 성능 고려
-     - 상태 관리 시 렌더링 범위 최소화
-     - 대규모 SPA에서 모듈 구조 최적화
+### 9-2. Vue 성능 최적화
 
-## 10장. SSR(서버 사이드 렌더링)과 SSG(정적 사이트 생성)
+- Pinia 중심 상태 관리 최적화
+- Vue 반응성 시스템 최적화 전략
 
-1. Next.js를 활용한 SSR
+## 10장. SSR과 SSG 최적화
 
-   - SSR의 기본 메커니즘
-     - 초기 렌더링 속도, SEO와의 관계
-     - `getServerSideProps`, `getStaticProps` 개념
-   - 성능 측면에서의 이점
-     - TTFB 개선, 성능 측정 지표
-     - CDN 배포와 SSR 캐싱 전략(간단한 적용 예시)
+### 10-1. Next.js 기반 SSR 최적화
 
-2. Nuxt.js를 활용한 SSR
+- SSR의 성능 이점과 측정 방법
 
-   - Nuxt.js 구조와 페이지 렌더링
-     - `pages/`, `asyncData()` 등 핵심 개념
-     - Vue SPA와 Nuxt SSR의 차이
-   - 실무 적용 예시
-     - 프로젝트 구성, 라우팅, Vuex/Pinia 연계
-     - 배포 시 최적화(Static Export 등)
+### 10-2. Nuxt.js 기반 SSR 최적화
 
-3. 간단한 SSG 활용
-   - Next.js / Nuxt.js에서의 정적 사이트 생성
-     - (Next) `getStaticProps`, Incremental Static Regeneration
-     - (Nuxt) `nuxt generate` 명령어, 정적 빌드 & 배포
-   - 성능 및 SEO 효과
-     - CDN 캐싱, 빌드 타임 렌더링이 주는 장점
-     - 예시 코드나 참고 링크 안내
+- Static Export 활용과 최적화 기법
 
-## 11장. Real-Time & 고급 시나리오 최적화
+### 10-3. 정적 사이트 생성(SSG) 전략
 
-1. 실시간 통신 기초
-   - WebSocket, SSE(Server-Sent Events), WebRTC 개념
-   - 폴링 vs 푸시 전략 비교
-2. WebSocket 성능과 부하 분산
-   - 메시지 형식(JSON, 바이너리) 선택
-   - 서버 리소스, 로드 밸런싱 고려
-3. 대규모 DOM 및 데이터 시각화
-   - 가상 스크롤, OffscreenCanvas, Web Workers
-   - D3.js, Chart.js에서의 성능 팁
+- 정적 생성과 CDN 배포 최적화
+
+## 11장. 실시간 통신 및 대규모 DOM 최적화
+
+### 11-1. WebSocket과 SSE 통신 최적화
+
+- WebSocket/SSE 개념 및 최적화 전략
+
+### 11-2. WebSocket 부하 분산
+
+- 메시지 포맷 선택과 서버 확장 전략
+
+### 11-3. 대규모 DOM 및 데이터 시각화
+
+- 가상 스크롤, Web Workers, OffscreenCanvas
 
 ## 12장. 테스트와 모니터링, 디버깅
 
-1. 성능 테스트 자동화
-   - Lighthouse CI, Jest+Puppeteer, Cypress
-   - 스크립트 기반 성능 지표 수집
-2. 부하 테스트 기초
-   - k6, Gatling, JMeter를 통한 API 부하
-   - 프런트엔드 개발자의 관점에서 체크할 항목
-3. 실시간 모니터링과 알림
-   - RUM 도구(Sentry, Datadog) 사용
-   - 로그, 에러 리포팅과 성능 연계
+### 12-1. 성능 테스트 자동화
+
+- Lighthouse CI, Puppeteer, Cypress 실습
+
+### 12-2. 부하 테스트 기초
+
+- k6, Gatling, JMeter 도구 소개
+
+### 12-3. 실시간 모니터링과 알림
+
+- Sentry, Datadog을 활용한 실시간 성능 모니터링
 
 ## 13장. 모바일 환경 성능 최적화
 
-1. 모바일 디바이스 특성
-   - 네트워크 제약, CPU/GPU 스펙
-   - 뷰포트, 터치 이벤트 성능
-2. 반응형 디자인과 CSS/JS 최적화
-   - 미디어 쿼리, IntersectionObserver 활용
-   - 이벤트 디바운스/스로틀 등
-3. PWA(Progressive Web Apps)
-   - Service Worker, Offline 캐싱
-   - 성능 측면에서의 전략(Fallback, Cache-first 등)
+### 13-1. 모바일 디바이스 성능 특성
+
+- 네트워크와 하드웨어 제약 이해
+
+### 13-2. 반응형 디자인 및 최적화
+
+- 미디어 쿼리, IntersectionObserver 전략
+
+### 13-3. PWA(Progressive Web Apps)
+
+- Offline 캐싱 및 Fallback 전략
 
 ## 14장. 보안과 성능의 균형
 
-1. HTTPS/TLS 적용에 따른 성능 영향
-   - 인증서 최적화, [OCSP Stapling](https://en.wikipedia.org/wiki/OCSP_stapling) 등
-2. CSP, SRI, 보안 헤더
-   - XSS 방어와 리소스 무결성(SRI)이 성능에 주는 영향
-3. 인증과 세션 관리
-   - JWT, 쿠키, 로컬 스토리지
-   - 페이로드 크기와 성능 고려
+### 14-1. HTTPS/TLS 성능 최적화
+
+- 인증서 최적화, OCSP Stapling 활용
+
+### 14-2. CSP, SRI, 보안 헤더
+
+- 리소스 무결성과 성능 균형 전략
+
+### 14-3. 인증과 세션 관리 최적화
+
+- JWT, 쿠키 저장 및 전송 최적화
 
 ## 15장. 간단 실전 예제 둘러보기
 
-1. 싱글 페이지 포트폴리오 예제
-   - 리액트 중 하나를 활용해 구조 잡기
-   - Lighthouse로 측정한 성능 지표 전후 비교
-   - CSS/JS/이미지 최적화 과정을 순서대로 요약
-2. 작은 규모 이커머스 예제
-   - 제품 리스트 페이지와 상세 페이지 구현
-   - Lazy Loading, 코드 스플리팅 적용 예시
-   - CDN(무료 계정) 사용해서 정적 리소스 배포 시도
-3. 정리
-   - 간단 예제라도 실제로 적용해본 후 배운 점
-   - 독자가 확장해서 더 해볼 만한 아이디어
+### 15-1. 포트폴리오 웹사이트 최적화 실습
 
-## 16장. 향후 기술 동향
+- 성능 측정 및 개선 흐름 실습
 
-1. 차세대 웹 기술
-   - WebAssembly, WebGPU, OffscreenCanvas
-   - AI/ML 기반 사용자 분석과 성능 자동 최적화
-2. 서버리스와 엣지 컴퓨팅
-   - AWS Lambda@Edge, Cloudflare Workers
-   - Edge-first 아키텍처가 프런트엔드 성능에 미치는 영향
+### 15-2. 소규모 이커머스 사이트 최적화 실습
+
+- Lazy Loading, 코드 스플리팅, CDN 적용
+
+### 15-3. 결과 정리 및 추가 아이디어 제안
+
+- 적용 결과 분석 및 확장 방향 제안
+
+## 16장. 향후 웹 기술 동향
+
+### 16-1. 차세대 웹 기술 동향
+
+- WebAssembly, WebGPU, AI 기반 최적화
+
+### 16-2. 서버리스와 엣지 컴퓨팅
+
+- Edge-first 아키텍처가 성능에 미치는 영향
 
 ## 17장. 마치며
 
-1. 이 책에서 다룬 내용의 핵심 정리
-2. 마치는 글
+### 17-1. 핵심 내용 요약
+
+- 주요 학습 포인트 정리
+
+### 17-2. 마지막 메시지
+
+- 다음 학습 방향 제안
 
 ## 부록
 
-1. 성능 튜닝 체크리스트
-   - 프론트 중심(HTML, CSS, JS, 이미지, 폰트, 네트워크 등)
-2. 용어 정리(Glossary)
-   - 주요 성능·네트워크·보안 용어 설명
+### 부록-1. 성능 튜닝 체크리스트
+
+- HTML, CSS, JS, 이미지, 폰트, 네트워크 항목 정리
+
+### 부록-2. 용어 정리(Glossary)
+
+- 이 책에서 다룬 주요 용어 설명
