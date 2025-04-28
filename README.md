@@ -59,6 +59,7 @@
 ### 4-3. 리소스 전송 효율화
 
 - 압축, 캐싱, 리소스 프리로딩 전략
+- Preload, Prefetch, DNS Prefetch, Preconnect 등 리소스 힌트
 
 ## 5장. 빌드와 번들 최적화
 
