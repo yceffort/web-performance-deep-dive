@@ -75,7 +75,6 @@
 - [9-1. 프레임워크 성능 최적화 공통 원칙](./posts/chapter9/9-1.공통_원칙.md)
 - [9-2. React 성능 개선 패턴](./posts/chapter9/9-2.React_최적화.md)
 - [9-3. Vue 성능 개선 패턴](./posts/chapter9/9-3.Vue_최적화.md)
-- [9-4. (선택적) 기타 프레임워크 고려 사항](./posts/chapter9/9-4.기타_프레임워크.md)
 
 ### [10장. 서버 렌더링(SSR/SSG) 성능 완전 정복](./posts/chapter10/10-0.intro.md)
 
