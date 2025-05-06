@@ -6,13 +6,13 @@
 
 ### 1장. 시작하며
 
-- [1-1. 왜 웹 성능이 중요한가?](./posts/chapter1/1-1.왜_웹_성능이_중요한가.md)
-- [1-2. 책의 구성 및 학습 가이드](./posts/chapter1/1-2.책의_구성_및_학습_가이드.md)
+- [1-1. 왜 웹 성능이 중요한가?](./posts/part1/chapter1/1-1.왜_웹_성능이_중요한가.md)
+- [1-2. 책의 구성 및 학습 가이드](./posts/part1/chapter1/1-2.책의_구성_및_학습_가이드.md)
 
 ### 2장. 웹 성능, 어떻게 측정하고 이해할까?
 
-- [2-1. 핵심 웹 지표 (LCP, INP, CLS) 깊이 알기](./posts/chapter2/2-1.핵심_웹_지표.md)
-- [2-2. 주요 성능 지표 (TTFB, FCP, TTI 등) 와 그 의미](./posts/chapter2/2-2.주요_성능_지표.md)
+- [2-1. 핵심 웹 지표 (LCP, INP, CLS) 깊이 알기](./posts/part1/chapter2/2-1.핵심_웹_지표.md)
+- [2-2. 주요 성능 지표 (TTFB, FCP, TTI 등) 와 그 의미](./posts/part1/chapter2/2-2.주요_성능_지표.md)
 - [2-3. 성능 측정 환경: Lab vs Field (RUM)](./posts/chapter2/2-3.측정_환경.md)
 - [2-4. 핵심 측정 도구 사용법 (Chrome DevTools, Lighthouse, WebPageTest)](./posts/chapter2/2-4.측정_도구.md)
 - [2-5. 지속적인 측정과 개선의 중요성](./posts/chapter2/2-5.지속적_측정.md)
